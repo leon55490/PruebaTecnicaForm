@@ -19,33 +19,37 @@
                         <div class="app-titulo">
                             <span>REGÍSTRATE</span>
                         </div>
-
                     </div>
                     <div class="pantalla-cuerpo-elemento">
-                        <div class="app-formulario">
-                            <div class="app-formulario-grupo">
-                                <input class="app-formulario-control"
-                                    placeholder="NOMBRE" value>
+                        <form [formGroup]="fGroup" (ngSubmit)="enviar()"
+                            novalidate>
+                            <div class="app-formulario">
+                                <div class="app-formulario-grupo">
+                                    <input formControlName="nombre"
+                                        class="app-formulario-control"
+                                        placeholder="NOMBRE">
+                                </div>
+                                <div class="app-formulario-grupo">
+                                    <input formControlName="correo"
+                                        class="app-formulario-control"
+                                        placeholder="CORREO">
+                                </div>
+                                <div class="app-formulario-grupo">
+                                    <input formControlName="numero"
+                                        class="app-formulario-control"
+                                        placeholder="NÚMERO">
+                                </div>
+                                <div class="app-formulario-grupo mensaje">
+                                    <input formControlName="mensaje"
+                                        class="app-formulario-control"
+                                        placeholder="MENSAJE">
+                                </div>
+                                <div class="app-formulario-grupo botones">
+                                    <button type="submit"
+                                        class="app-formulario-boton">ENVIAR</button>
+                                </div>
                             </div>
-                            <div class="app-formulario-grupo">
-                                <input class="app-formulario-control"
-                                    placeholder="CORREO">
-                            </div>
-                            <div class="app-formulario-grupo">
-                                <input class="app-formulario-control"
-                                    placeholder="NÚMERO">
-                            </div>
-                            <div class="app-formulario-grupo mensaje">
-                                <input class="app-formulario-control"
-                                    placeholder="MENSAJE">
-                            </div>
-                            <div class="app-formulario-grupo botones">
-
-                                <button
-                                    class="app-formulario-boton">ENVIAR</button>
-
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
